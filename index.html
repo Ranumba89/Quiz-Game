@@ -1,14 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Game</title>
+    <link rel="stylesheet" href="./components/bootstrap.min.css">
     <link rel="stylesheet" href="./components/style.css">
 </head>
-<body>
-    
 
+<body>
+
+    <article class="container start-page" style="display: inherit;">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">Welcome to the Coding quiz. You have about mmmm.. 3 min to answer 10 questions.
+                 Add your Initials at the end. Good Luck sucka ! </div>
+
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-outline-primary btn-sm btn-block" onclick="start()">Start
+                    Quiz</button>
+
+            </div>
+            <div class="col-md-4"></div>
+
+        </div>
+    </article>
+
+
+    <section class="container main-page" style="display: none;">
+    <div class="clock">000</div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 col-sm-12">
+                <div class="row question-column">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad laboriosam adipisci
+                        deleniti? Fugit perspiciatis deserunt, provident ipsam, voluptas repellat aliquam
+                        dolore quod harum iste corporis obcaecati consectetur ducimus nobis quidem.</p>
+                </div>
+                <div class="row answers-column" disabled="true">
+                    <button type="button" class="btn btn-outline-secondary btn-sm btn-block" id="one">Block level
+                        button</button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm btn-block" id="two">Block level
+                        button</button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm btn-block" id="three">Block level
+                        button</button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm btn-block" id="four">nn</button>
+
+                </div>
+                <div class="row">
+                    <h4 class="alert-heading alert-column" style="text-align: center;"></h4>
+                </div>
+
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </section>
+
+    <div class="container last-page" style="display: none;">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">Your Score is: <span class="quiz-score"></span>
+            </div>
+
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-outline-primary btn-sm btn-block" onclick="initials()">Next</button>
+
+            </div>
+            <div class="col-md-4"></div>
+
+        </div>
+
+    </div>
+    <div class="container initial-page" style="display: none;" >
+        <div class="card">
+
+            <form method="POST">
+                <div class="input-group">
+                    <label for="first-name">Initials</label>
+                    <input type="text" name="first-name" id="first-name" placeholder="Initials" />
+                </div>
+                <div id="msg"></div>
+                <button id="sign-up">Put Initials</button>
+                <button id="sign-up  " onclick="start()">New Quiz</button>
+
+            </form>
+
+        </div>
+
+        <div class="card">
+            <h2>Last Registered User:</h2>
+            <p><strong>User Initials:</strong> <span id="user-first-name"></span></p>
+            <p><strong>Quiz score:</strong> <span id="user-Score"></span></p>
+
+        </div>
+    </div>
+
+   
+    
+    
+    <script src="./components/quizes.js"></script>
     <script src="./components/script.js"></script>
 </body>
+
 </html>
